@@ -1,0 +1,32 @@
+{
+  "name": "better-dollar",
+  "description": " Smart wrapper for jQuery's `$()` function.",
+  "main": "src/better-dollar.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "zepto",
+    "$"
+  ],
+  "authors": [
+    "cssmagic <cssmagic.cn@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cssmagic/better-dollar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "gulpfile.js",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "zepto": "1.*"
+  }
+}
