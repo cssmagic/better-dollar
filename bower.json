@@ -1,6 +1,6 @@
 {
   "name": "better-dollar",
-  "description": " Smart wrapper for jQuery's `$()` function.",
+  "description": "Smart wrapper for jQuery's `$()` function.",
   "main": "src/better-dollar.js",
   "moduleType": [
     "globals"
@@ -27,6 +27,11 @@
     "jquery": "*"
   },
   "devDependencies": {
-    "zepto": "1.*"
+    "jquery-v1": "jquery#1.*",
+    "jquery-v2": "jquery#2.*",
+    "zepto.js": "1.*",
+    "mocha.css": "0.1.0",
+    "mocha": "1.*",
+    "chai": "1.*"
   }
 }
