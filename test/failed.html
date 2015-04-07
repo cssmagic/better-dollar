@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>UT - Failed by Original `$`</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../bower_components/mocha/mocha.css">
+<link rel="stylesheet" href="../bower_components/mocha.css/src/mocha.css">
+</head>
+<body>
+<header>
+	<h1>UT - Failed by Original `$`</h1>
+	<p><a href="https://github.com/cssmagic/better-dollar">Get Better-Dollar</a></p>
+</header>
+<div id="mocha"></div>
+<!-- deps -->
+<script src="../bower_components/jquery-v1/dist/jquery.js"></script>
+<script>
+var jQueryV1 = jQuery
+</script>
+<script src="../bower_components/jquery-v2/dist/jquery.js"></script>
+<script>
+var jQueryV2 = jQuery
+</script>
+<script src="../bower_components/zepto.js/dist/zepto.js"></script>
+<!-- testing framework -->
+<script src="../bower_components/mocha/mocha.js"></script>
+<script src="../bower_components/chai/chai.js"></script>
+<script>
+mocha.setup('bdd')
+mocha.checkLeaks()
+var expect = chai.expect
+</script>
+<!-- test-case -->
+<script src="failed.js"></script>
+<!-- init -->
+<script>mocha.run()</script>
+</body>
+</html>

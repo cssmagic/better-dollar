@@ -1,24 +1,23 @@
 void function () {
 	describe('APIs', function () {
 		describe('dollar()', function () {
+			var wrapper = dollar
 			it('does basic functionality same as $()', function () {
 				var elem
-				var obj
 				elem = document.getElementById('mocha')
-				obj = dollar(elem)
-				expect(obj).to.deep.equal($(elem))
+				expect(wrapper(elem)).to.deep.equal($(elem))
 				elem = 'body'
-				obj = dollar(elem)
-				expect(obj).to.deep.equal($(elem))
+				expect(wrapper(elem)).to.deep.equal($(elem))
 			})
-			it('returns directly if already a $ element (or a $ collection)', function () {
-				var obj = $('#mocha')
-				expect(dollar(obj)).to.equal(obj)
+			it('returns directly if already a wrapped element', function () {
+				var $a = wrapper('#mocha')
+				var $b = wrapper($a)
+				expect($a).to.equal($b)
 			})
 			it('doesn\'t generate multiple $ elements for the same dom element', function () {
 				var obj = document.getElementById('mocha')
-				var $a = dollar(obj)
-				var $b = dollar(obj)
+				var $a = wrapper(obj)
+				var $b = wrapper(obj)
 				expect($a).to.equal($b)
 			})
 		})
