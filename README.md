@@ -4,13 +4,13 @@
 
 ## 这个项目是怎么来的？
 
-我们都知道，jQuery 的 `$()` 函数可以获取 DOM 元素并将其包装为一个 jQuery 对象（或称为 “jQuery 集合”），它几乎是所有 jQuery API 的入口。它很重要，但我们对它仍有一些不满：
+我们都知道，jQuery 的 `$()` 函数可以获取 DOM 元素并将其包装为一个 jQuery 对象，它几乎是所有 jQuery API 的入口。它很重要，但我们对它仍有一些不满：
 
 * **当传入一个 jQuery 对象时**
 
 	如果我们传给 `$()` 函数的已经是一个经过包装的元素，它只需要把传入的参数直接返回就可以了。但 jQuery 会生成一个新的 jQuery 对象。
 
-* **当反复调用时**
+* **当反复包装同一元素时**
 
 	对一个 DOM 元素频繁进行操作时，可能会生成大量 jQuery 对象。参考以下代码：
 
@@ -22,7 +22,7 @@
 
 	每次点击 `#switch` 元素时，都会生成一个新的 jQuery 对象——即使它们包裹的 DOM 元素是同一个。
 
-因此，Better-Dollar 试图在 `$()` 函数之上再做一层包装，避免上述问题。
+因此，Better-Dollar 试图在 `$()` 函数之上做一层封装，以避免上述问题。
 
 ## 兼容性
 
@@ -51,9 +51,14 @@
 		...
 		<script src="bower_components/jquery/dist/jquery.js">
 		<script src="bower_components/better-dollar/src/better-dollar.js">
+		<!-- your code here -->
 	</body>
 	</html>
 	```
+
+## API 文档
+
+所有文档入口在 [Wiki 页面](https://github.com/cssmagic/better-dollar/wiki)，快去看吧！
 
 ## 单元测试
 
