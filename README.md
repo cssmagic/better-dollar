@@ -38,22 +38,17 @@
 ## 安装
 
 0. 通过 Bower 安装：
+
 	```sh
 	$ bower install better-dollar
 	```
 
 0. 在页面中加载 Better-Dollar 的脚本文件及必要的依赖：
+
 	```html
-	<!DOCTYPE html>
-	<html>
-	<head>...</head>
-	<body>
-		...
-		<script src="bower_components/jquery/dist/jquery.js">
-		<script src="bower_components/better-dollar/src/better-dollar.js">
-		<!-- your code here -->
-	</body>
-	</html>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/better-dollar/src/better-dollar.js"></script>
+	<!-- your code here -->
 	```
 
 ## API 文档
